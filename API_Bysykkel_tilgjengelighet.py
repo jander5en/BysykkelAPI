@@ -4,8 +4,8 @@ import requests
 import geocoder
 
 while True:
-    stations = requests.get('https://oslobysykkel.no/api/v1/stations', headers = {'Client-Identifier': '3a46c43689be4fc2b8f58aca57206a28'})
-    availability = requests.get('https://oslobysykkel.no/api/v1/stations/availability', headers = {'Client-Identifier': '3a46c43689be4fc2b8f58aca57206a28'})
+    stations = requests.get('https://oslobysykkel.no/api/v1/stations', headers = {'Client-Identifier': 'DIN-ID'})
+    availability = requests.get('https://oslobysykkel.no/api/v1/stations/availability', headers = {'Client-Identifier': 'DIN-ID'})
     parsed_stations = json.loads(stations.text)
     parsed_availability = json.loads(availability.text)
     #print(parsed_stations['stations'][0]['center']['latitude'])
